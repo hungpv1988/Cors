@@ -1,0 +1,69 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<button onclick="sendRequest('https://localhost:44318/Product')">Test Cross Origin With Custom Provider</button>
+<br />
+<button onclick="sendRequestCompatibleToMiddelWare('https://localhost:44318/Home')">Test Cross Origin With Middle Ware</button>
+
+@section Scripts
+{
+    <script>
+        // Cors is handled by Cors Provider so if we add access-control-request-method to header, it may fail. Origin header may not be needed becasue
+        // browser can automatically add current location to it.
+        function sendRequest(endpoint) {
+            $.ajax({
+                url: endpoint,
+                type: "GET",
+                crossDomain: true,
+                headers: {
+                    "accept": "application/json"
+                },
+                beforeSend: function (xhr) {
+                    console.log("1");
+                }
+            })
+                .fail(function (error) {
+                    console.log(error);
+                    debugger;
+                })
+                .done(function (data) {
+                    console.log("2");
+                    debugger;
+                });
+        }
+
+        // Cors is handled by Middleware so we need access-control-request-method
+        // for Jquery, to add special headers see https://stackoverflow.com/questions/5584923/a-cors-post-request-works-from-plain-javascript-but-why-not-with-jquery
+        function sendRequestCompatibleToMiddelWare(endpoint) {
+            $.ajax({
+                url: endpoint,
+                type: "GET",
+                contentType: "x-custom-header",
+                crossDomain: true,
+                headers: {
+                    "accept": "application/json",
+                    "access-control-request-method": "*",
+                    "access-control-allow-headers": "x-requested-with"
+                },
+                beforeSend: function (xhr) {
+                    console.log("1");
+                }
+            })
+                .fail(function (error) {
+                    console.log(error);
+                    debugger;
+                })
+                .done(function (data) {
+                    console.log("2");
+                    debugger;
+                });
+        }
+    </script>
+}
