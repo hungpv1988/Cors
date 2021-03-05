@@ -45,12 +45,9 @@
             $.ajax({
                 url: endpoint,
                 type: "GET",
-                contentType: "x-custom-header",
                 crossDomain: true,
                 headers: {
-                    "accept": "application/json",
-                    "access-control-request-method": "*",
-                    "access-control-allow-headers": "x-requested-with"
+                    "accept": "application/json"
                 },
                 beforeSend: function (xhr) {
                     console.log("1");

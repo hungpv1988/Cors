@@ -31,10 +31,10 @@ namespace Cors
             //  if needed, add policy here instead of UseCors in Configure 
             //be careful, if add slash(https://localhost:44371/) this will not work
 
-            var corsPolicy = new CorsPolicy();
-            corsPolicy.Origins.Add("https://localhost:44371");
-            services.AddCors(option => option.AddPolicy(Constants.DefaultCorsPolicy, corsPolicy));
-            services.AddTransient<ICorsPolicyProvider, OurCorsPolicyProvider>();
+            //var corsPolicy = new CorsPolicy();
+            //corsPolicy.Origins.Add("https://localhost:44371");
+            //services.AddCors(option => option.AddPolicy(Constants.DefaultCorsPolicy, corsPolicy));
+            //services.AddTransient<ICorsPolicyProvider, OurCorsPolicyProvider>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,6 +53,12 @@ namespace Cors
 
             // add user Cors
             app.UseCors();
+            
+            // this is to use middle ware, not OurCorsPolicyProvider, so adding policy here is fine.
+            // remember to comment those lines of code if you use OurCorsPolicyProvider
+            var corsPolicy = new CorsPolicy();
+            corsPolicy.Origins.Add("https://localhost:44371");
+            app.UseMiddleware<CorsMiddleWare>(Constants.DefaultCorsPolicy, corsPolicy);
 
             app.UseAuthorization();
 
@@ -61,11 +67,7 @@ namespace Cors
                 endpoints.MapControllers();
             });
 
-            // this is to use middle ware, not OurCorsPolicyProvider, so adding policy here is fine.
-            // remember to comment those lines of code if you use OurCorsPolicyProvider
-            //var corsPolicy = new CorsPolicy();
-            //corsPolicy.Origins.Add("https://localhost:44371");
-            //app.UseMiddleware<CorsMiddleWare>(Constants.DefaultCorsPolicy, corsPolicy);
+ 
         }
     }
 }

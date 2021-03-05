@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\EPiServer\\Tech\\NetCoreResearch\\Net5\\Cors\\Cors.csproj": {}
+    "D:\\EPiServer\\Tech\\Cors\\Cors\\Net5\\Cors\\Cors.csproj": {}
   },
   "projects": {
-    "D:\\EPiServer\\Tech\\NetCoreResearch\\Net5\\Cors\\Cors.csproj": {
+    "D:\\EPiServer\\Tech\\Cors\\Cors\\Net5\\Cors\\Cors.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\EPiServer\\Tech\\NetCoreResearch\\Net5\\Cors\\Cors.csproj",
+        "projectUniqueName": "D:\\EPiServer\\Tech\\Cors\\Cors\\Net5\\Cors\\Cors.csproj",
         "projectName": "Cors",
-        "projectPath": "D:\\EPiServer\\Tech\\NetCoreResearch\\Net5\\Cors\\Cors.csproj",
+        "projectPath": "D:\\EPiServer\\Tech\\Cors\\Cors\\Net5\\Cors\\Cors.csproj",
         "packagesPath": "C:\\Users\\hung\\.nuget\\packages\\",
-        "outputPath": "D:\\EPiServer\\Tech\\NetCoreResearch\\Net5\\Cors\\obj\\",
+        "outputPath": "D:\\EPiServer\\Tech\\Cors\\Cors\\Net5\\Cors\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hung\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nqs5/wL5utH06lRHMfLZhVeea+XWZH4TsT89LWNHwFT6warkrnA17jpXLlS3bBfq6sMIvyWaa5FtTGyOUMsaFQ==",
+  "dgSpecHash": "Rw3t7IrlL1UATQMIhljYF0/u/fUGmG3mYfF5H1fFXy22HV2Dh9V1s+Yn+AdD9rTj6HqaV6lbFzkinyv3S/cbWQ==",
   "success": true,
-  "projectFilePath": "D:\\EPiServer\\Tech\\NetCoreResearch\\Net5\\Cors\\Cors.csproj",
+  "projectFilePath": "D:\\EPiServer\\Tech\\Cors\\Cors\\Net5\\Cors\\Cors.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hung\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.1\\microsoft.aspnetcore.authentication.jwtbearer.5.0.1.nupkg.sha512",
     "C:\\Users\\hung\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\5.0.1\\microsoft.aspnetcore.authentication.openidconnect.5.0.1.nupkg.sha512",

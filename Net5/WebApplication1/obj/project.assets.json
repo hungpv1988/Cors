@@ -748,11 +748,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\EPiServer\\Tech\\NetCoreResearch\\Net5\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "D:\\EPiServer\\Tech\\Cors\\Cors\\Net5\\WebApplication1\\WebApplication1.csproj",
       "projectName": "WebApplication1",
-      "projectPath": "D:\\EPiServer\\Tech\\NetCoreResearch\\Net5\\WebApplication1\\WebApplication1.csproj",
+      "projectPath": "D:\\EPiServer\\Tech\\Cors\\Cors\\Net5\\WebApplication1\\WebApplication1.csproj",
       "packagesPath": "C:\\Users\\hung\\.nuget\\packages\\",
-      "outputPath": "D:\\EPiServer\\Tech\\NetCoreResearch\\Net5\\WebApplication1\\obj\\",
+      "outputPath": "D:\\EPiServer\\Tech\\Cors\\Cors\\Net5\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hung\\AppData\\Roaming\\NuGet\\NuGet.Config",
