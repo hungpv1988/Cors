@@ -51,11 +51,12 @@ namespace Cors
 
             app.UseRouting();
 
-            // add user Cors
+            // add user Cors, and this must be after UseRouting
             app.UseCors();
             
             // this is to use middle ware, not OurCorsPolicyProvider, so adding policy here is fine.
             // remember to comment those lines of code if you use OurCorsPolicyProvider
+            // need to put this before UseAuthorization
             var corsPolicy = new CorsPolicy();
             corsPolicy.Origins.Add("https://localhost:44371");
             app.UseMiddleware<CorsMiddleWare>(Constants.DefaultCorsPolicy, corsPolicy);
